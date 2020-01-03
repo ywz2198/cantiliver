@@ -35,13 +35,17 @@ def box():
     choose = tkinter.Button(wd, text='选择文件', command=choosefile)
     label = tkinter.Button(wd, text = '制作标签表',command = icon)
     handle = tkinter.Button(wd, text = '定位支撑',command = handles)
+    refresh = tkinter.Button(wd, text='重新生成导入及人工表格', command=newtwo)
     ct['text'] = count
     rp.pack()
     choose.pack()
     label.pack()
     handle.pack()
+    refresh.pack()
     wd.mainloop()
 
+def newtwo():
+    mycopyfile(oneloc+'\\文档\\导入.csv', oneloc+ '\\导入.csv')
 
 def rpc():
     os.chdir('E:\Pyxel')
